@@ -1,0 +1,14 @@
+factory:
+  image: factory_app
+  ports:
+  - "80:3000"
+  links:
+  - factorymongo
+  environment:
+  - MONGO_URL=mongodb://factorymongo:27017/meteor
+  - ROOT_URL=http://localhost
+  - PORT=3000
+  - METEOR_SETTINGS=${METEOR_SETTINGS}
+factorymongo:
+  image: mongo
+

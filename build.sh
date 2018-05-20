@@ -3,6 +3,7 @@
 CUR_DIR="$(cd "$(dirname $0)" && pwd)"
 BUILDS_DIR=${CUR_DIR}/build/
 
-meteor build ${BUILDS_DIR}/factory --directory
+cd ${CUR_DIR}/factory && meteor build ${BUILDS_DIR} --directory
 
-cp factory/settings.json build/
+cd ${BUILDS_DIR} && docker build -t factory_app .
+
