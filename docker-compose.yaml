@@ -6,7 +6,7 @@ factory:
   - factorymongo
   environment:
   - MONGO_URL=mongodb://factorymongo:27017/meteor
-  - ROOT_URL=http://localhost
+  - ROOT_URL=${ROOT_URL}
   - PORT=3000
   - METEOR_SETTINGS=${METEOR_SETTINGS}
 factorymongo:
