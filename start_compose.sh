@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if [ "$#" -ne 1 ] || [ ! -f "$1" ]; then
-  echo "usage: start_compose [meteor_settings_filename]";
+if [ "$#" -ne 2 ] || [ ! -f "$2" ]; then
+  echo "usage: start_compose [root_url] [meteor_settings_filename]";
 fi
 
-METEOR_SETTINGS="$(cat "$(realpath $1)")" docker-compose up
+ROOT_URL="$1" METEOR_SETTINGS="$(cat "$(realpath $2)")" docker-compose up
 
