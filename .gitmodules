@@ -1,0 +1,3 @@
+[submodule "packages/factory"]
+    path = factory
+    url = git@gitlab.cs.washington.edu:mjyc/factory.git
